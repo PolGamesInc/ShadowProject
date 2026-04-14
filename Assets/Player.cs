@@ -46,9 +46,10 @@ public class Player : MonoBehaviour
 
     private void Jump(float jumpForce)
     {
-        if (Physics2D.Raycast(transform.position, Vector2.up, 2f, GroundMask))
+        Vector2 originPointRayCast = new Vector2(transform.position.x, transform.position.y + 1.2f);
+        Debug.DrawRay(originPointRayCast, Vector2.down * 0.1f, Color.red);
+        if (Physics2D.Raycast(originPointRayCast, Vector2.down, 0.1f, GroundMask))
         {
-            Debug.DrawRay(transform.position, Vector2.up * 2f, Color.red);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 PlayerRigidbody.linearVelocityY = jumpForce;
