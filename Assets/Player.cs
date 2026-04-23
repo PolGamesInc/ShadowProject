@@ -21,6 +21,22 @@ public class Player : MonoBehaviour
         Jump(7);
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Light")
+        {
+            PlayerAnimator.SetBool("LightZone", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag == "Light")
+        {
+            PlayerAnimator.SetBool("LightZone", false);
+        }
+    }
+
     private void Move(float speed)
     {
         float DirectionMove = Input.GetAxisRaw("Horizontal"); // GetAxitRaw убирает плавноть и разгон в отличии от GetAxis
