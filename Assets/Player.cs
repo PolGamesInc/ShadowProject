@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,10 +11,15 @@ public class Player : MonoBehaviour
     [Header("Animations")]
     private Animator PlayerAnimator;
 
+    [Header("GameFunctions")]
+    private float DeadhTime = 4f;
+    [SerializeField] private Text TimeDeadhText;
+
     private void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponent<Animator>();
+        TimeDeadhText.text = null;
     }
 
     private void Update()
@@ -23,9 +30,16 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Light")
-        {
+        if (collision.tag == "Light")
+        { 
+            DeadhTime -= Time.deltaTime;
+            TimeDeadhText.text = DeadhTime.ToString();
             PlayerAnimator.SetBool("LightZone", true);
+        }
+
+        if(DeadhTime <= 0.3f)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 
