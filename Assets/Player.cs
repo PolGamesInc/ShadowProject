@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private Animator PlayerAnimator;
 
     [Header("GameFunctions")]
-    private float DeadhTime = 4f;
+    private float DeadhTime;
     [SerializeField] private Text TimeDeadhText;
 
     private void Start()
@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
         PlayerRigidbody = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponent<Animator>();
         TimeDeadhText.text = null;
+
+        DeadhTime = 4f;
     }
 
     private void Update()
@@ -39,7 +41,7 @@ public class Player : MonoBehaviour
 
         if(DeadhTime <= 0.3f)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -49,6 +51,9 @@ public class Player : MonoBehaviour
         {
             PlayerAnimator.SetBool("LightZone", false);
         }
+
+        TimeDeadhText.text = null;
+        DeadhTime = 4f;
     }
 
     private void Move(float speed)
