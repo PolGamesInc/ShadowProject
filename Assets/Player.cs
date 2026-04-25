@@ -15,6 +15,11 @@ public class Player : MonoBehaviour
     private float DeadhTime;
     [SerializeField] private Text TimeDeadhText;
 
+    [Header("Sound")]
+    private AudioSource AudioPlayer;
+    [SerializeField] private AudioClip WalkPlayerSound;
+    [SerializeField] private AudioClip JumpPlayerSound;
+
     private void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody2D>();
@@ -22,6 +27,8 @@ public class Player : MonoBehaviour
         TimeDeadhText.text = null;
 
         DeadhTime = 4f;
+
+        AudioPlayer = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -41,7 +48,7 @@ public class Player : MonoBehaviour
 
         if(DeadhTime <= 0.3f)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
     }
 
@@ -63,10 +70,17 @@ public class Player : MonoBehaviour
         if(DirectionMove == 0)
         {
             PlayerAnimator.SetBool("Walk", false);
+            AudioPlayer.clip = JumpPlayerSound;
         }
         else
         {
             PlayerAnimator.SetBool("Walk", true);
+
+            if (AudioPlayer.isPlaying == false)// если звук ещё не играет, то тогда {}
+            {
+                AudioPlayer.clip = WalkPlayerSound;
+                AudioPlayer.Play();
+            }
         }
 
         if(DirectionMove < 0)
@@ -89,6 +103,9 @@ public class Player : MonoBehaviour
             {
                 PlayerRigidbody.linearVelocityY = jumpForce;
                 PlayerAnimator.SetTrigger("Jump");
+
+                AudioPlayer.clip = JumpPlayerSound;
+                AudioPlayer.Play();
             }
         }
     }
