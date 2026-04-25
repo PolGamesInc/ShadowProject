@@ -108,5 +108,9 @@ public class Player : MonoBehaviour
                 AudioPlayer.Play();
             }
         }
+        else
+        {
+            AudioPlayer.clip = JumpPlayerSound;
+        }
     }
 }
