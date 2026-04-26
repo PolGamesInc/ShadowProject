@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     {
         Move(5);
         Jump(7);
+        CameraFollow();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -50,11 +51,6 @@ public class Player : MonoBehaviour
         if(DeadhTime <= 0.3f)
         {
             SceneManager.LoadScene(2);
-        }
-
-        if (collision.tag == "MainCamera")
-        {
-            CameraObject.transform.position = new Vector3(transform.position.x, CameraObject.transform.position.y, -10f);
         }
     }
 
@@ -125,6 +121,14 @@ public class Player : MonoBehaviour
         else
         {
             AudioPlayer.clip = JumpPlayerSound;
+        }
+    }
+
+    private void CameraFollow()
+    {
+        if (transform.position.x >= 0)
+        {
+            CameraObject.transform.position = new Vector3(transform.position.x, CameraObject.transform.position.y, -10f);
         }
     }
 }
