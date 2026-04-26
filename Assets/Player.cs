@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [Header("GameFunctions")]
     private float DeadhTime;
     [SerializeField] private Text TimeDeadhText;
+    [SerializeField] private GameObject CameraObject;
 
     [Header("Sound")]
     private AudioSource AudioPlayer;
@@ -49,6 +50,11 @@ public class Player : MonoBehaviour
         if(DeadhTime <= 0.3f)
         {
             SceneManager.LoadScene(2);
+        }
+
+        if (collision.tag == "MainCamera")
+        {
+            CameraObject.transform.position = new Vector3(transform.position.x, CameraObject.transform.position.y, -10f);
         }
     }
 
