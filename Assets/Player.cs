@@ -69,6 +69,14 @@ public class Player : MonoBehaviour
         DeadhTime = 4f;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "NewLocationZone")
+        {
+            SceneManager.LoadScene(4);
+        }
+    }
+
     private void Move(float speed)
     {
         float DirectionMove = Input.GetAxisRaw("Horizontal"); // GetAxitRaw убирает плавноть и разгон в отличии от GetAxis
