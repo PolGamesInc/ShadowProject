@@ -434,14 +434,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5080372009208307581, guid: f91175c75dc4d034d976b696d0c805dc, type: 3}
-      propertyPath: CameraObject
-      value: 
-      objectReference: {fileID: 500404134}
-    - target: {fileID: 5080372009208307581, guid: f91175c75dc4d034d976b696d0c805dc, type: 3}
-      propertyPath: TimeDeadhText
-      value: 
-      objectReference: {fileID: 1438002736}
     - target: {fileID: 2688167325526414141, guid: f998402f6b0fbe241a756bfc1b2e2fcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.01
@@ -491,6 +483,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 500404134}
     - target: {fileID: 5080372009208307581, guid: f998402f6b0fbe241a756bfc1b2e2fcc, type: 3}
+      propertyPath: TimeDeadhText
+      value: 
+      objectReference: {fileID: 1438002736}
+    - target: {fileID: 5080372009208307581, guid: f91175c75dc4d034d976b696d0c805dc, type: 3}
+      propertyPath: CameraObject
+      value: 
+      objectReference: {fileID: 500404134}
+    - target: {fileID: 5080372009208307581, guid: f91175c75dc4d034d976b696d0c805dc, type: 3}
       propertyPath: TimeDeadhText
       value: 
       objectReference: {fileID: 1438002736}
@@ -1154,6 +1154,10 @@ PrefabInstance:
     - target: {fileID: 3606598349660749831, guid: 2826ba27946a271409aa2faef997adb3, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606598349660749831, guid: 2826ba27946a271409aa2faef997adb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8426303517459735113, guid: 2826ba27946a271409aa2faef997adb3, type: 3}
       propertyPath: m_LocalPosition.x

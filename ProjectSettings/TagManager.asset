@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Light
   - NewLocationZone
+  - Leader
   layers:
   - Default
   - TransparentFX

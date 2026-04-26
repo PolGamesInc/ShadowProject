@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private float DeadhTime;
     [SerializeField] private Text TimeDeadhText;
     [SerializeField] private GameObject CameraObject;
+    private bool isLeader;
 
     [Header("Sound")]
     private AudioSource AudioPlayer;
@@ -30,6 +31,8 @@ public class Player : MonoBehaviour
         DeadhTime = 4f;
 
         AudioPlayer = GetComponent<AudioSource>();
+
+        isLeader = false;
     }
 
     private void Update()
@@ -63,6 +66,11 @@ public class Player : MonoBehaviour
 
         TimeDeadhText.text = null;
         DeadhTime = 4f;
+
+        if(collision.tag == "Leader")
+        {
+            isLeader = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -71,6 +79,11 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(4);
         }
+
+        if (collision.tag == "Leader")
+        {
+            isLeader = true;
+        } 
     }
 
     private void Move(float speed)
@@ -121,6 +134,11 @@ public class Player : MonoBehaviour
         else
         {
             AudioPlayer.clip = JumpPlayerSound;
+        }
+
+        if (isLeader && Input.GetKeyDown(KeyCode.Space))
+        {
+            PlayerRigidbody.linearVelocityY = 10f;
         }
     }
 
