@@ -7,6 +7,7 @@ TagManager:
   - Light
   - NewLocationZone
   - Leader
+  - Lever
   layers:
   - Default
   - TransparentFX
