@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     [Header("GameFunctions")]
     private float DeadhTime;
+    [SerializeField] private ParticleSystem DeadhParticles;
 
     [SerializeField] private Text TimeDeadhText;
     [SerializeField] private GameObject CameraObject;
@@ -68,6 +69,7 @@ public class Player : MonoBehaviour
             DeadhTime -= Time.deltaTime;
             TimeDeadhText.text = DeadhTime.ToString();
             PlayerAnimator.SetBool("LightZone", true);
+            DeadhParticles.Play();
         }
 
         if (DeadhTime <= 0.3f)
@@ -81,6 +83,7 @@ public class Player : MonoBehaviour
         if (collision.tag == "Light")
         {
             PlayerAnimator.SetBool("LightZone", false);
+            DeadhParticles.Stop();
         }
 
         TimeDeadhText.text = null;
