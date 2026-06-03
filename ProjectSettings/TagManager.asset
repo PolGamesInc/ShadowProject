@@ -8,6 +8,8 @@ TagManager:
   - NewLocationZone
   - Leader
   - Lever
+  - Money
+  - NewLocationZone2
   layers:
   - Default
   - TransparentFX

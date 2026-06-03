@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     [Header("GameFunctions")]
     private float DeadhTime;
     [SerializeField] private ParticleSystem DeadhParticles;
+    [SerializeField] private GameObject Box;
+    [SerializeField] private Vector2 PointSpawnBox;
 
     [SerializeField] private Text TimeDeadhText;
     [SerializeField] private GameObject CameraObject;
@@ -27,9 +29,11 @@ public class Player : MonoBehaviour
 
     [Header("Sound")]
     private AudioSource AudioPlayer;
+    [SerializeField] private AudioSource MoneySoundManager;
 
     [SerializeField] private AudioClip WalkPlayerSound;
     [SerializeField] private AudioClip JumpPlayerSound;
+
 
     private void Start()
     {
@@ -52,14 +56,20 @@ public class Player : MonoBehaviour
         Jump(7);
         CameraFollow();
 
-        if (isLever && Input.GetKeyDown(KeyCode.E)) // это кострукция переключателя для состояния или то, или то 
+        if (isLever && Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "Game") // это кострукция переключателя для состояния или то, или то 
         {
             bool newState = !LeverAnimator.GetBool("LeverState");
             LeverAnimator.SetBool("LeverState", newState);
             LightForLeader.GetComponent<CircleCollider2D>().enabled = newState;
             LightForLeader.GetComponent<Light2D>().intensity = newState ? 5f : 0f; // если newState = true, то intensity в light2d = 5, а если newState = false, то ntensity в light2d = 0. это называется "тернарный оператор". если просто : краткая запись if-else  
-            print(newState);
-        } 
+        }
+
+        if (isLever && Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "GameTwo") // это кострукция переключателя для состояния или то, или то 
+        {
+            bool newState = !LeverAnimator.GetBool("LeverState");
+            LeverAnimator.SetBool("LeverState", newState);
+            Instantiate(Box, PointSpawnBox, Quaternion.identity);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -107,6 +117,11 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(4);
         }
 
+        if (collision.tag == "NewLocationZone2")
+        {
+            SceneManager.LoadScene(5);
+        }
+
         if (collision.tag == "Leader")
         {
             isLeader = true;
@@ -115,6 +130,14 @@ public class Player : MonoBehaviour
         if (collision.tag == "Lever")
         {
             isLever = true;
+        }
+
+        if(collision.tag == "Money")
+        {
+            MoneySoundManager.Play();
+
+            GameObject Money = collision.gameObject;
+            Destroy(Money);
         }
     }
 
