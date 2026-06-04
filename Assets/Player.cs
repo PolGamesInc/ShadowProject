@@ -139,6 +139,11 @@ public class Player : MonoBehaviour
             GameObject Money = collision.gameObject;
             Destroy(Money);
         }
+
+        if(collision.tag == "Fall")
+        {
+            PlayerAnimator.SetTrigger("Fall");
+        }
     }
 
     private void Move(float speed)
