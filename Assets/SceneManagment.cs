@@ -9,28 +9,25 @@ public class SceneManagment : MonoBehaviour
     private void Start()
     {
         ButtonAudioSource = GetComponent<AudioSource>();
+    }
 
-        if(SceneManager.GetActiveScene().name == "Prev")
+    private void Update()
+    {
+        if(Input.anyKeyDown && SceneManager.GetActiveScene().name == "Prev")
         {
-            StartCoroutine(WaitLoadSceneMenu(0));
+            SceneManager.LoadScene(0);
         }
     }
 
     public void SceneLoader(int sceneIndex)
     {
        ButtonAudioSource.Play();
-        StartCoroutine(WaitButton(sceneIndex));
+       StartCoroutine(WaitButton(sceneIndex));
     }
 
     public void ExitApp()
     {
         Application.Quit();
-    }
-
-    private IEnumerator WaitLoadSceneMenu(int indexScene)
-    {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(indexScene);
     }
 
     private IEnumerator WaitButton(int indexScene)
