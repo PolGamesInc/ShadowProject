@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     [SerializeField] private ParticleSystem DeadhParticles;
     [SerializeField] private GameObject Box;
     [SerializeField] private Vector2 PointSpawnBox;
+    private int countMoney;
+    [SerializeField] private Text CountMoneyText;
 
     [SerializeField] private Text TimeDeadhText;
     [SerializeField] private GameObject CameraObject;
@@ -70,6 +72,8 @@ public class Player : MonoBehaviour
             LeverAnimator.SetBool("LeverState", newState);
             Instantiate(Box, PointSpawnBox, Quaternion.identity);
         }
+
+        CountMoneyText.text = countMoney.ToString();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -119,7 +123,7 @@ public class Player : MonoBehaviour
 
         if (collision.tag == "NewLocationZone2")
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(0);
         }
 
         if (collision.tag == "Leader")
@@ -138,6 +142,7 @@ public class Player : MonoBehaviour
 
             GameObject Money = collision.gameObject;
             Destroy(Money);
+            countMoney++;
         }
 
         if(collision.tag == "Fall")

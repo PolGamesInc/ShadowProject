@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c187ccce874b31548b8424f79d40869d
+guid: fe60f8195d3940c40968f1a490c18581
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4606908045521496030
-    second: Heart_0
+      213: -1752219387394823674
+    second: Intersect (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heart_0
+      name: Intersect (1)_0
       rect:
         serializedVersion: 2
-        x: 945
-        y: 1068
-        width: 1101
-        height: 1094
+        x: 0
+        y: 0
+        width: 759
+        height: 786
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed7a23e75760fef30800000000000000
-      internalID: 4606908045521496030
+      spriteID: 60a67c530cddea7e0800000000000000
+      internalID: -1752219387394823674
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Heart_0: 4606908045521496030
+      Intersect (1)_0: -1752219387394823674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

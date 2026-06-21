@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c187ccce874b31548b8424f79d40869d
+guid: 01d63d7a8be3cce4990b26ef12040300
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4606908045521496030
-    second: Heart_0
+      213: -837054542096858341
+    second: BrokenHeart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heart_0
+      name: BrokenHeart_0
       rect:
         serializedVersion: 2
         x: 945
-        y: 1068
-        width: 1101
-        height: 1094
+        y: 1070
+        width: 577
+        height: 1092
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed7a23e75760fef30800000000000000
-      internalID: 4606908045521496030
+      spriteID: b1380b0345f2264f0800000000000000
+      internalID: -837054542096858341
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Heart_0: 4606908045521496030
+      BrokenHeart_0: -837054542096858341
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "InputSystem_Actions",
     "maps": [
         {
@@ -986,6 +987,34 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "BackToMenu",
+            "id": "80c765b7-0bf5-49ea-b3c0-f9067966c8d8",
+            "actions": [
+                {
+                    "name": "EscapeInput",
+                    "type": "Button",
+                    "id": "2f17ac7b-add7-4295-91a2-8e6106c5547d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "683809c7-8328-4ef6-af43-fe4c93d24c55",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EscapeInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

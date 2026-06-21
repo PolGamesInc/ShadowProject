@@ -1,10 +1,37 @@
 fileFormatVersion: 2
-guid: c187ccce874b31548b8424f79d40869d
+guid: e161ed7134a89fc4e9bb719ba9127806
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4606908045521496030
-    second: Heart_0
+      213: 6005505760219104435
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_0"
+  - first:
+      213: 1477510954555355472
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_1"
+  - first:
+      213: 3678376231862856869
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_2"
+  - first:
+      213: 398196821492137022
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_3"
+  - first:
+      213: -1000820037161673619
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_4"
+  - first:
+      213: -4562797512977202040
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_5"
+  - first:
+      213: -4428028564565280702
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_6"
+  - first:
+      213: -1871241376325330116
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_7"
+  - first:
+      213: -5987570522702993383
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_8"
+  - first:
+      213: 5221242713481863164
+    second: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_9"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +166,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heart_0
+      name: "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_1"
       rect:
         serializedVersion: 2
-        x: 945
-        y: 1068
-        width: 1101
-        height: 1094
+        x: 0
+        y: 0
+        width: 506
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed7a23e75760fef30800000000000000
-      internalID: 4606908045521496030
+      spriteID: 051350e826c218410800000000000000
+      internalID: 1477510954555355472
       vertices: []
       indices: 
       edges: []
@@ -164,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cf4db325e798d6448a264ebb3049825c
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +201,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Heart_0: 4606908045521496030
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_0": 6005505760219104435
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_1": 1477510954555355472
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_2": 3678376231862856869
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_3": 398196821492137022
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_4": -1000820037161673619
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_5": -4562797512977202040
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_6": -4428028564565280702
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_7": -1871241376325330116
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_8": -5987570522702993383
+      "\u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438_9": 5221242713481863164
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
