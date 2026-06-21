@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -213,5 +214,11 @@ public class Player : MonoBehaviour
         {
             CameraObject.transform.position = new Vector3(transform.position.x, CameraObject.transform.position.y, -10f);
         }
+    }
+
+    public void LoadMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            SceneManager.LoadScene(0);
     }
 }
