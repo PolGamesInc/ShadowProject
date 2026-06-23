@@ -188,6 +188,8 @@ public class Player : MonoBehaviour
         Debug.DrawRay(originPointRayCast, Vector2.down * 0.1f, Color.red);
         if (Physics2D.Raycast(originPointRayCast, Vector2.down, 0.1f, GroundMask))
         {
+            PlayerAnimator.SetTrigger("isGround");
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 PlayerRigidbody.linearVelocityY = jumpForce;
