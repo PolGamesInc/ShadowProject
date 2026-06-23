@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
 
         if (DeadhTime <= 0.3f)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
 
         if (collision.tag == "NewLocationZone2")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 
         if (collision.tag == "Leader")

@@ -15,7 +15,7 @@ public class SceneManagment : MonoBehaviour
     {
         if(Input.anyKeyDown && SceneManager.GetActiveScene().name == "Prev")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 

@@ -25,7 +25,7 @@ public class SettingsManager : MonoBehaviour
    public void LoadMenu(InputAction.CallbackContext context)
     {
         if (context.performed)
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
     }
     //Переход на сцену 0 с использованием события
 
